@@ -1,5 +1,5 @@
 import { dayjs } from "@/configuration/dayjs";
-import { websiteDateFormat } from "@/configuration/site";
+import { websiteDateFormat, websiteTitle } from "@/configuration/site";
 import {
   extractCategoriesFromPosts,
   extractTagsFromPosts,
@@ -9,7 +9,6 @@ import {
 import { MainLayout } from "@/ui/main-layout";
 import { MarkdownPresenter } from "@/ui/markdown-presenter";
 import { PostCategoryAndTags } from "@/ui/post-category-and-tags";
-import { PostListPageMetadata } from "@/ui/post-list-page-metadata";
 
 export async function generateStaticParams() {
   const allPosts = await queryAllPosts();
@@ -21,11 +20,30 @@ export async function generateStaticParams() {
   });
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: {
+    postSlug: string;
+  };
+}) {
+  const allPosts = await queryAllPosts();
+  const post = findPostBySlug(allPosts, params.postSlug);
+
+  if (!post) {
+    throw new Error("Cannot find post with slug " + params.postSlug);
+  }
+
+  return {
+    title: `${websiteTitle} >> ${post.data.title}`,
+    description: post.data.abstract,
+  };
+}
+
 export default async function PostPage({
   params,
 }: {
   params: { postSlug: string };
-  urlPrefix: string;
 }) {
   const allPosts = await queryAllPosts();
   const allCategories = await extractCategoriesFromPosts(allPosts);
@@ -51,6 +69,7 @@ export default async function PostPage({
           </div>
         </header>
         <main>
+          {/* eslint-disable-next-line react/no-children-prop */}
           <MarkdownPresenter children={post.content} />
         </main>
       </article>

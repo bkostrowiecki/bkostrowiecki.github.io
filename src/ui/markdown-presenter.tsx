@@ -22,6 +22,7 @@ export function MarkdownPresenter(props: any) {
               ref={rest.ref as any}
               {...rest}
               PreTag="div"
+              // eslint-disable-next-line react/no-children-prop
               children={String(children).replace(/\n$/, "")}
               language={match[1]}
               style={okaidia}

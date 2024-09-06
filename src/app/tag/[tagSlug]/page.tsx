@@ -2,6 +2,7 @@ import { extractTagsFromPosts, queryAllPosts } from "@/domain/query";
 import { GenericRouteParams } from "../../templates/parse-params";
 import PostsListPage from "../../templates/posts-list.-page";
 import { slugify } from "@/domain/slug";
+import { generateMetadataForPostList } from "@/app/templates/metadata";
 
 export async function generateStaticParams() {
   const allPosts = await queryAllPosts();
@@ -16,13 +17,28 @@ export async function generateStaticParams() {
   return staticParams;
 }
 
+export async function generateMetadata({
+  params,
+}: {
+  params: GenericRouteParams;
+}) {
+  const metadata = generateMetadataForPostList(params);
+
+  return metadata;
+}
+
 export default async function CategoryPage({
   params,
 }: {
   params: GenericRouteParams;
 }) {
-  return <PostsListPage params={{
-    ...params,
-    page: "1",
-  }} urlPrefix={"/tag/" + params.tagSlug} />;
+  return (
+    <PostsListPage
+      params={{
+        ...params,
+        page: "1",
+      }}
+      urlPrefix={"/tag/" + params.tagSlug}
+    />
+  );
 }

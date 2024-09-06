@@ -1,17 +1,10 @@
-import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import { websiteDescription, websiteTitle } from "@/configuration/site";
 
 const poppins = Poppins({
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700", "800", "900"],
 });
-
-export const metadata: Metadata = {
-  title: websiteTitle,
-  description: websiteDescription,
-};
 
 export default function RootLayout({
   children,
