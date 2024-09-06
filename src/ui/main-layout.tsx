@@ -36,16 +36,23 @@ export function MainLayout({ allTags, allCategories, children }: Props) {
         </h2>
 
         <div className="text-center flex justify-center items-center gap-2">
-          <Link href="https://github.com/bkostrowiecki">
+          <Link href="https://github.com/bkostrowiecki" target="_blank">
             <i className="bi bi-github text-2xl" />
           </Link>
-          <Link href="https://www.youtube.com/@bkej420" className="mt-1">
+          <Link
+            href="https://www.youtube.com/@bkej420"
+            target="_blank"
+            className="mt-1"
+          >
             <i className="bi bi-youtube text-3xl" />
           </Link>
-          <Link href="https://www.linkedin.com/in/bartosz-kostrowiecki/">
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/in/bartosz-kostrowiecki/"
+          >
             <i className="bi bi-linkedin text-2xl" />
           </Link>
-          <Link href="https://lichess.org/@/bkej">
+          <Link href="https://lichess.org/@/bkej" target="_blank">
             <i className="nai nai-lichess text-2xl mt-0.5" />
           </Link>
         </div>
