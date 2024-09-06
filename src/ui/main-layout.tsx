@@ -12,8 +12,8 @@ type Props = PropsWithChildren & {
 
 export function MainLayout({ allTags, allCategories, children }: Props) {
   return (
-    <div className="bg-gray-800 w-full min-h-svh text-gray-50 flex flex-row ">
-      <header className="bg-gray-900 min-h-full w-2/12 justify-center flex items-center flex-col shadow-lg text-center">
+    <div className="bg-gray-800 w-full min-h-svh text-gray-50 flex flex-row">
+      <header className="bg-gray-900 min-h-full w-2/12 justify-center flex items-center flex-col shadow-lg text-center shadow-2xl">
         <Link
           className="border-4 rounded-full center border-white "
           style={{ width: 120, height: 120 }}
