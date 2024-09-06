@@ -36,6 +36,9 @@ export function MainLayout({ allTags, allCategories, children }: Props) {
         </h2>
 
         <div className="text-center flex justify-center items-center gap-2">
+          <Link href="https://github.com/bkostrowiecki">
+            <i className="bi bi-github text-2xl" />
+          </Link>
           <Link href="https://www.youtube.com/@bkej420" className="mt-1">
             <i className="bi bi-youtube text-3xl" />
           </Link>
