@@ -4,6 +4,7 @@ import { TagLink } from "./tag-link";
 import { CategoryLink } from "./category-link";
 import { CategoryEntity, TagEntity } from "@/domain/post";
 import Link from "next/link";
+import classNames from "classnames";
 
 type Props = PropsWithChildren & {
   allTags: TagEntity[];
@@ -11,6 +12,8 @@ type Props = PropsWithChildren & {
 };
 
 export function MainLayout({ allTags, allCategories, children }: Props) {
+  const socialHoverClassNames = `hover:text-blue-300 transition-all`;
+
   return (
     <div className="bg-gray-800 w-full min-h-svh text-gray-50 flex flex-row">
       <header className="bg-gray-900 min-h-full w-2/12 justify-center flex items-center flex-col shadow-lg text-center shadow-2xl">
@@ -36,23 +39,44 @@ export function MainLayout({ allTags, allCategories, children }: Props) {
         </h2>
 
         <div className="text-center flex justify-center items-center gap-2">
-          <Link href="https://github.com/bkostrowiecki" target="_blank">
-            <i className="bi bi-github text-2xl" />
+          <Link
+            href="https://bkostrowiecki.itch.io"
+            target="_blank"
+            title="Github account"
+            className={socialHoverClassNames}
+          >
+            <i className="bi bi-github text-2xl mt-0.5" />
+          </Link>
+          <Link
+            href="https://itch.io/@/bkostrowiecki"
+            target="_blank"
+            title="Itch.io account"
+            className={socialHoverClassNames}
+          >
+            <i className="fab fa-itch-io text-2xl" />
           </Link>
           <Link
             href="https://www.youtube.com/@bkej420"
             target="_blank"
-            className="mt-1"
+            className={classNames("mt-1", socialHoverClassNames)}
+            title="YouTube account"
           >
             <i className="bi bi-youtube text-3xl" />
           </Link>
           <Link
             target="_blank"
             href="https://www.linkedin.com/in/bartosz-kostrowiecki/"
+            title="LinkedIn account"
+            className={socialHoverClassNames}
           >
             <i className="bi bi-linkedin text-2xl" />
           </Link>
-          <Link href="https://lichess.org/@/bkej" target="_blank">
+          <Link
+            href="https://lichess.org/@/bkej"
+            target="_blank"
+            title="Lichess account"
+            className={socialHoverClassNames}
+          >
             <i className="nai nai-lichess text-2xl mt-0.5" />
           </Link>
         </div>
@@ -60,15 +84,19 @@ export function MainLayout({ allTags, allCategories, children }: Props) {
         <nav>
           <div className="py-5">
             <h3 className="text-gray-300 text-sm mb-1">Categories</h3>
-            {allCategories.map((category) => (
-              <CategoryLink category={category} key={category} />
-            ))}
+            <div className="flex gap-2 justify-center">
+              {allCategories.map((category) => (
+                <CategoryLink category={category} key={category} />
+              ))}
+            </div>
           </div>
-          <div className="py-5">
+          <div className="pt-1">
             <h3 className="text-gray-300 text-sm mb-1">Tags</h3>
-            {allTags.map((tag) => (
-              <TagLink tag={tag} key={tag} />
-            ))}
+            <div className="flex gap-2 justify-center">
+              {allTags.map((tag) => (
+                <TagLink tag={tag} key={tag} />
+              ))}
+            </div>
           </div>
         </nav>
       </header>

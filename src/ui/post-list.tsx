@@ -6,7 +6,11 @@ type Props = {
 };
 
 export function PostList({ posts }: Props) {
-  return posts.map((post) => {
-    return <PostListItem key={post.data.slug} post={post} />;
-  });
+  return (
+    <div className="flex flex-col gap-7">
+      {posts.map((post) => {
+        return <PostListItem key={post.data.slug} post={post} />;
+      })}
+    </div>
+  );
 }

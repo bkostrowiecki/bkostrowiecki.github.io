@@ -10,7 +10,7 @@ type Props = {
 
 export function PostListItem({ post }: Props) {
   return (
-    <article className="shadow-2xl bg-gray-900 rounded-2xl px-6 py-5">
+    <article className="shadow-2xl bg-gray-900 rounded-2xl px-6 py-5 flex flex-col">
       <header>
         <h2 className="text-4xl text-gray-100 font-bold">
           <Link href={`/${post.data.slug}`}>{post.data.title}</Link>
