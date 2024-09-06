@@ -59,13 +59,13 @@ export function MainLayout({ allTags, allCategories, children }: Props) {
 
         <nav>
           <div className="py-5">
-            <h3>Categories</h3>
+            <h3 className="text-gray-300 text-sm mb-1">Categories</h3>
             {allCategories.map((category) => (
               <CategoryLink category={category} key={category} />
             ))}
           </div>
           <div className="py-5">
-            <h3>Tags</h3>
+            <h3 className="text-gray-300 text-sm mb-1">Tags</h3>
             {allTags.map((tag) => (
               <TagLink tag={tag} key={tag} />
             ))}
