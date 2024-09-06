@@ -9,7 +9,7 @@ type Props = {
 export function TagLink({ tag }: Props) {
   return (
     <Link
-      className="px-3 py-1.5 bg-blue-700 rounded-lg inline-block text-sm"
+      className="px-3 py-1.5 bg-blue-700 rounded-lg inline-block text-xs"
       href={"/tag/" + slugify(tag)}
     >
       {tag}
