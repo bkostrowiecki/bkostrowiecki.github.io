@@ -14,7 +14,7 @@ type Props = PropsWithChildren & {
 };
 
 export function MainNavigation({ allTags, allCategories }: Props) {
-  const socialHoverClassNames = `hover:text-blue-300 transition-all`;
+  const socialHoverClassNames = `text-blue-400 hover:text-blue-200 transition-all`;
 
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -24,7 +24,7 @@ export function MainNavigation({ allTags, allCategories }: Props) {
 
   return (
     <>
-      <div className="lg:hidden fixed right-2 md:right-5 bottom-16 sm:bottom-16 md:bottom-auto top-auto md:top-2">
+      <div className="lg:hidden fixed right-2 md:right-5 bottom-16 sm:bottom-16 md:bottom-auto top-auto md:top-2 print:hidden">
         <button
           className="navbar-burger border-2 border-solid border-gray-400 hover:border-gray-100 hover:text-white rounded-xl flex items-center text-gray-200 p-3"
           onClick={onHamburgerClick}
@@ -39,9 +39,10 @@ export function MainNavigation({ allTags, allCategories }: Props) {
           </svg>
         </button>
       </div>
+      <div className="w-0 sm:w-0 xs:w-0 lg:w-3/12 xl:w-2/12"></div>
       <header
         className={classNames(
-          "bg-gray-900 p-5 min-h-full lg:w-3/12 xl:w-2/12 justify-center flex transition-all items-center flex-col text-center shadow-2xl fixed sm:fixed md:fixed lg:relative",
+          "bg-gray-900 p-5 min-h-full lg:w-3/12 xl:w-2/12 justify-center flex transition-all items-center flex-col text-center shadow-2xl fixed sm:fixed md:fixed",
           {
             "-left-full sm:-left-full md:-left-full lg:left-0": !isExpanded,
             "w-10/12 sm:w-10/12 md:w-10/12 lg:w-auto left-0": isExpanded,
@@ -116,6 +117,14 @@ export function MainNavigation({ allTags, allCategories }: Props) {
         </div>
 
         <nav>
+          <div className="py-5">
+            <Link
+              href="/resume"
+              className="text-blue-400 hover:text-blue-200 transition-all"
+            >
+              Resume
+            </Link>
+          </div>
           <div className="py-5">
             <h3 className="text-gray-300 text-sm mb-1">Categories</h3>
             <div className="flex gap-2 justify-center">

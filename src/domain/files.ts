@@ -55,3 +55,14 @@ export const fetchAllFilesFromGivenFolder = async (fullPath: Path) => {
 
 export const getPostsFolder = () =>
   pathifyString(path.join(process.cwd(), "data/posts"));
+
+export const getResumeFilePath = () =>
+  pathifyString(path.join(process.cwd(), "data/resume/resume.json"));
+
+export const fetchJsonFile = async (fullPath: string) => {
+  const content = await fs.readFile(fullPath, "utf8");
+
+  console.log(content);
+
+  return JSON.parse(content);
+}

@@ -1,0 +1,254 @@
+{
+  "basics": {
+    "name": "Bartosz Kostrowiecki",
+    "label": "Software Developer",
+    "picture": "https://pl.gravatar.com/userimage/63182736/5c4cf58666b0aa7f86c4d1c3ccb89edf.jpg?size=200",
+    "location": {
+      "city": "Warsaw",
+      "countryCode": "Poland"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "bkostrowiecki",
+        "url": "https://www.linkedin.com/in/bartosz-kostrowiecki/"
+      },
+      {
+        "network": "GitHub",
+        "username": "bkostrowiecki",
+        "url": "https://github.com/bkostrowiecki"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Hobo Bunch Sp. z o.o",
+      "position": "Lead Unity Programmer",
+      "website": "https://hobobunch.com",
+      "startDate": "2022-07-01",
+      "highlights": [
+        "Leading interdisciplinary team of artists and programmers",
+        "Developing features for City Builder Game",
+        "Managing communication with the client"
+      ],
+      "keywords": [
+        "Unity", "C#", "Reactive Programming", "Jenkins CI/CD"
+      ]
+    },
+    {
+      "company": "Freelance Work",
+      "position": "Software Developer",
+      "startDate": "2020-12-01",
+      "highlights": [
+        "Developing the site https://znany.pl",
+        "Creating mobile application for iOS and Android https://danceapp24.com"
+      ],
+      "keywords": [
+        "React", "React Native", "NextJS", "NodeJS", "GraphQL"
+      ]
+    },
+    {
+      "company": "Memcare Sp. z o.o.",
+      "position": "Senior React Developer",
+      "website": "https://memcare.com",
+      "startDate": "2019-12-01",
+      "endDate": "2020-04-01",
+      "summary": "React developer",
+      "highlights": [
+        "Developing the client-side layer of applications",
+        "Working on 3 complementary applications",
+        "Implementing features based on business requirements",
+        "Working with JSON API Standard",
+        "Collaborating with backend developers"
+      ],
+      "keywords": [
+        "React", "TypeScript", "Bitbucket Cloud CI/CD", "Redux", "Redux Saga"
+      ]
+    },
+    {
+      "company": "SoftwareONE Polska Sp. z o.o.",
+      "position": "Front-end developer",
+      "website": "https://www.softwareone.com/",
+      "startDate": "2019-03-18",
+      "endDate": "2019-11-30",
+      "summary": "Front-end developer in Scrum team",
+      "highlights": [
+        "Developing the client-side layer of applications",
+        "Working in microservice architecture environment",
+        "Implementing features based on business requirements",
+        "Working in self-organizing Scrum team",
+        "Presenting features to stakeholders",
+        "Writing unit tests",
+        "Refining requirements with business and UX designers"
+      ],
+      "keywords": [
+        "Angular", "REST", "Azure DevOps", "Scrum", "Microservices"
+      ]
+    },
+    {
+      "company": "Epicode sp. z o.o.",
+      "position": "Web Development Leader",
+      "website": "https://epicode.pl",
+      "startDate": "2017-05-01",
+      "endDate": "2019-02-28",
+      "summary": "Front-end developer & team leader",
+      "highlights": [
+        "Managing and leading a team of developers",
+        "Establishing good practices in projects",
+        "Architecture development of the client-side layer of applications",
+        "Implementing new functionalities",
+        "Maintaining existing functionalities in supported projects",
+        "Keeping project documentation up to date",
+        "Optimizations of applications - client-side",
+        "Writing unit tests and integration tests"
+      ],
+      "keywords": [
+        "TypeScript", "React", "React Native", "NodeJS", "Scrum"
+      ]
+    },
+    {
+      "company": "Epicode sp. z o.o.",
+      "position": "Web developer",
+      "website": "https://epicode.pl",
+      "startDate": "2017-04-30",
+      "endDate": "2019-02-28",
+      "summary": "Front-end developer & team leader",
+      "highlights": [
+        "Implementing new functionalities in the field of user interfaces",
+        "Maintaining existing functionalities in supported projects",
+        "Keeping project documentation up to date",
+        "Writing unit tests and integration tests"
+      ],
+      "keywords": [
+        "JavaScript", "TypeScript", "MVC .NET", "Razor", "React", "Wordpress"
+      ]
+    },
+    {
+      "company": "Webstars",
+      "position": "Web developer",
+      "startDate": "2014-03-01",
+      "endDate": "2014-09-01",
+      "summary": "Front-end developer",
+      "highlights": [
+        "Creating static application interfaces",
+        "Implementing functionalities based on provided documentation",
+        "Creating Wordpress templates from static layouts",
+        "Slicing prepared designs"
+      ],
+      "keywords": [
+        "HTML", "Less", "SCSS", "JavaScript", "AngularJS", "PHP", "Wordpress"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Sekcja Stoneru",
+      "url": "https://sekcjastoneru.pl",
+      "type": "culture",
+      "positions": [
+        {
+          "title": "Technical leader",
+          "startDate": "2020-04-20",
+          "endDate": "2021-06-01"
+        }
+      ],
+      "keywords": [
+        "HTML", "SCSS", "PHP", "Wordpress"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Less",
+        "SCSS",
+        "TypeScript",
+        "C#",
+        "PHP",
+        "Gherkin"
+      ]
+    },
+    {
+      "name": "Libraries & Frameworks",
+      "keywords": [
+        "React",
+        "React Native",
+        "Redux",
+        "Express",
+        "AngularJS",
+        "Wordpress",
+        "Bootstrap",
+        "Angular",
+        "Unity",
+        "RxJS"
+      ]
+    },
+    {
+      "name": "Tools",
+      "keywords": [
+        "GIT",
+        "Pivotal Tracker",
+        "JIRA",
+        "Bitbucket Cloud",
+        "Azure DevOps",
+        "Jenkins",
+        "Visual Studio Code"
+      ]
+    },
+    {
+      "name": "Operating systems",
+      "keywords": ["Windows", "MacOS", "Linux (Debian)"]
+    },
+    {
+      "name": "Management",
+      "keywords": ["Scrum", "Story mapping", "Event storming"]
+    },
+    {
+      "name": "Methodologies",
+      "keywords": ["Agile", "TDD", "BDD", "AWD", "RWD"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Polish (native speaker)"
+    },
+    {
+      "language": "English (intermediate)"
+    }
+  ],
+  "references": [
+    {
+      "name": "Michał Zielonka",
+      "reference": "I need to say that Bartosz is a quick learner. In three months he learned more than anyone else on my path. Not afraid of new challenges, always on time, even working at night to get things done. For sure we will work together in future projects. This guy is really worth recommendation."
+    },
+    {
+      "name": "Marcin Chudy",
+      "reference": "Bartosz is an excellent software engineer with a truly unique personality. Hard-working, open-minded and a true Agile evangelist. He always tries to find the best solutions possible in any project he is working on. During the time we had the chance to work together, he managed to build a great team and highly improve the internal development processes."
+    },
+    {
+      "name": "Jakub Szczepanik",
+      "reference": "We were working with Bartosz on several projects. Every time we've had problems or were struggling with any issue he always knew what to do. When You work with Bartosz You see that there are no impossible stories to implement, only the hard ones. I can also tell that he is a quick learner. When we had to use a new framework it took him a few days to learn it and introduce the whole front-end team to new technologies. Always open minded and joyful."
+    },
+    {
+      "name": "Aleksandra Dąbrowska",
+      "reference": "Bartosz is a committed employee who quickly becomes an expert in a field of interest. He is a natural leader who takes responsibility for the work of the whole team. In addition to performing well in programming tasks, it also takes into account the business value of new functions and analyses the impact of the feature on the rest of the system. He is a passionate, who devotes himself entirely to new projects and tries to conclude them carefully. I recommend working with Bartosz, because his effectiveness, commitment and conscientiousness are a guarantee to the project's success."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Secondary Technical School",
+      "area": "Information Technology",
+      "studyType": "Technician"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music",
+      "keywords": ["Stoner rock", "Stoner metal", "Guitar", "Bass", "Vocals"]
+    }
+  ]
+}

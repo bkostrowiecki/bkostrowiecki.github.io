@@ -56,7 +56,7 @@ export const filterPosts = (
   queryParams?: PostsQueryParams
 ) => {
   const sortedPosts = allPosts.sort((a, b) => {
-    return a.data.publicationAt.getTime() - b.data.publicationAt.getTime();
+    return b.data.publicationAt.getTime() - a.data.publicationAt.getTime();
   });
 
   const queriedPosts = sortedPosts.filter((post) => {

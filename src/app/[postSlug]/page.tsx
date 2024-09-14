@@ -13,6 +13,8 @@ import { PostCategoryAndTags } from "@/ui/post-category-and-tags";
 export async function generateStaticParams() {
   const allPosts = await queryAllPosts();
 
+  console.log('all posts');
+
   return allPosts.map((post) => {
     return {
       postSlug: post.data.slug,
