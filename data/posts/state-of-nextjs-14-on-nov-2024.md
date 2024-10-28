@@ -1,6 +1,6 @@
 ---
-title: State of NextJS 14 on Nov 2024
-slug: state-of-nextjs-14-on-nov-2024
+title: State of NextJS 14 on Oct 2024
+slug: state-of-nextjs-14-on-oct-2024
 publicationAt: 2024-10-03
 tags: NextJS,Web,React
 category: Notes
