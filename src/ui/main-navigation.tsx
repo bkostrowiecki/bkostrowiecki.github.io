@@ -127,7 +127,7 @@ export function MainNavigation({ allTags, allCategories }: Props) {
           </div>
           <div className="py-5">
             <h3 className="text-gray-300 text-sm mb-1">Categories</h3>
-            <div className="flex gap-2 justify-center">
+            <div className="flex flex-wrap gap-2 justify-center">
               {allCategories.map((category) => (
                 <CategoryLink category={category} key={category} />
               ))}
@@ -135,7 +135,7 @@ export function MainNavigation({ allTags, allCategories }: Props) {
           </div>
           <div className="pt-1">
             <h3 className="text-gray-300 text-sm mb-1">Tags</h3>
-            <div className="flex gap-2 justify-center">
+            <div className="flex flex-wrap gap-2 justify-center">
               {allTags.map((tag) => (
                 <TagLink tag={tag} key={tag} />
               ))}
