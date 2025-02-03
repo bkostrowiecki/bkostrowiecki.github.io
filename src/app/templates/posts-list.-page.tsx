@@ -25,7 +25,7 @@ export default async function PostsListPage({
 
   const posts = await filterPosts(allPosts, postsQueryParams);
 
-  const pagesNumber = calculatePages(allPosts);
+  const pagesNumber = calculatePages(posts);
 
   return (
     <MainLayout allCategories={allCategories} allTags={allTags}>
