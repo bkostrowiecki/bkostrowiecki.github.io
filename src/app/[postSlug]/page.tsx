@@ -7,8 +7,9 @@ import {
   findPostBySlug,
 } from "@/domain/query";
 import { MainLayout } from "@/ui/main-layout";
-import { MarkdownPresenter } from "@/ui/markdown-presenter";
+import { MarkdownPresenter } from "@/ui/markdown/markdown-presenter";
 import { PostCategoryAndTags } from "@/ui/post-category-and-tags";
+import { renderToHTML, renderToHTMLImpl } from "next/dist/server/render";
 
 export async function generateStaticParams() {
   const allPosts = await queryAllPosts();
@@ -72,7 +73,7 @@ export default async function PostPage({
         </header>
         <main>
           {/* eslint-disable-next-line react/no-children-prop */}
-          <MarkdownPresenter children={post.content} />
+          <MarkdownPresenter content={post.content} />
         </main>
       </article>
     </MainLayout>

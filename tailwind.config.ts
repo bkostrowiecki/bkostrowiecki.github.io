@@ -27,6 +27,19 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      typography: (theme: (arg0: string) => any[]) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              color: theme('colors.blue.500'),
+              transition: 'color 0.2s ease-in-out',
+              '&:hover': {
+                color: theme('colors.blue.300')
+              },
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [
