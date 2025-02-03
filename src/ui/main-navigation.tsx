@@ -42,10 +42,10 @@ export function MainNavigation({ allTags, allCategories }: Props) {
       <div className="w-0 sm:w-0 xs:w-0 lg:w-3/12 xl:w-2/12"></div>
       <header
         className={classNames(
-          "bg-gray-900 p-5 min-h-full lg:w-3/12 xl:w-2/12 justify-center flex transition-all items-center flex-col text-center shadow-2xl fixed sm:fixed md:fixed",
+          "bg-gray-900 p-5 min-h-full lg:w-3/12 xl:w-2/12 w-10/12 sm:w-10/12 md:w-10/12 justify-center flex transition-all items-center flex-col text-center shadow-2xl fixed sm:fixed md:fixed",
           {
-            "-left-full sm:-left-full md:-left-full lg:left-0": !isExpanded,
-            "w-10/12 sm:w-10/12 md:w-10/12 lg:w-auto left-0": isExpanded,
+            "-left-screen xs:-left-screen sm:-left-screen md:-left-screen lg:left-0": !isExpanded,
+            "left-0": isExpanded,
           }
         )}
       >

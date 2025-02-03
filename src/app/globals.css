@@ -17,3 +17,7 @@
 .rehype-figure > figcaption {
   @apply px-3 text-wrap max-w-full
 }
+
+.-left-screen {
+  left: -130vw;
+}
