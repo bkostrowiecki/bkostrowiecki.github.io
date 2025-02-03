@@ -6,7 +6,7 @@ import {
 } from "@/domain/query";
 import { GenericRouteParams } from "../../../templates/parse-params";
 import PostsListPage from "../../../templates/posts-list.-page";
-import { slugify } from "@/domain/slug";
+import { slugifyForStaticParams } from "@/domain/slug";
 import { generateMetadataForPostList } from "@/app/templates/metadata";
 
 export async function generateStaticParams() {
@@ -31,7 +31,7 @@ export async function generateStaticParams() {
         ...Array.from(Array(categoryMetadata.pagesNumber), (_, index) => index),
       ].map((item) => {
         return {
-          categorySlug: slugify(categoryMetadata.category),
+          categorySlug: slugifyForStaticParams(categoryMetadata.category),
           page: (item + 1).toString(),
         };
       });

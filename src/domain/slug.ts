@@ -1,5 +1,9 @@
 export function slugify(str: string) {
-  return encodeURIComponent(str.toLocaleLowerCase().replaceAll(" ", "-"));
+  return encodeURIComponent(slugifyForStaticParams(str));
+}
+
+export function slugifyForStaticParams(str: string) {
+  return str.toLocaleLowerCase().replaceAll(" ", "-");
 }
 
 export function unslugify<T>(str: string) {
