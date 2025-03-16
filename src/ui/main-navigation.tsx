@@ -117,14 +117,14 @@ export function MainNavigation({ allTags, allCategories }: Props) {
         </div>
 
         <nav>
-          <div className="py-5">
+          {/* <div className="py-5">
             <Link
               href="/resume"
               className="text-blue-400 hover:text-blue-200 transition-all"
             >
               Resume
             </Link>
-          </div>
+          </div> */}
           <div className="py-5">
             <h3 className="text-gray-300 text-sm mb-1">Categories</h3>
             <div className="flex flex-wrap gap-2 justify-center">

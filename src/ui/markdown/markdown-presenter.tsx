@@ -1,12 +1,13 @@
 'use client';
 
-import Markdown from "react-markdown";
+import Markdown, { ExtraProps } from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeFigure from 'rehype-figure';
 import remarkGfm from "remark-gfm";
 import remarkCodeBlocks from 'remark-code-blocks'
+import { ClassAttributes, HTMLAttributes, ImgHTMLAttributes } from "react";
 
 export function MarkdownPresenter(props: { content: string }) {
 
@@ -16,7 +17,7 @@ export function MarkdownPresenter(props: { content: string }) {
       rehypePlugins={[rehypeFigure, rehypeAutolinkHeadings]}
       remarkPlugins={[remarkGfm, remarkCodeBlocks]}
       components={{
-        code(props: { [x: string]: any; children: any; className: any; node: any; }) {
+        code(props: ClassAttributes<HTMLElement> & HTMLAttributes<HTMLElement> & ExtraProps) {
           const { children, className, node, ...rest } = props;
           const match = /language-(\w+)/.exec(className || "");
 
@@ -36,7 +37,7 @@ export function MarkdownPresenter(props: { content: string }) {
             </code>
           );
         },
-        img: ({ src, alt, ...rest }: { src: string, alt: string }) => {
+        img: ({ src, alt, ...rest }: ClassAttributes<HTMLImageElement> & ImgHTMLAttributes<HTMLImageElement> & ExtraProps) => {
           return <a href={src} data-src={src} target="_blank">
             <img
               src={src}
