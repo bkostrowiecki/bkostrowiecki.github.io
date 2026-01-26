@@ -1,6 +1,6 @@
 'use client';
 
-import { PropsWithChildren, useState } from "react";
+import { PropsWithChildren, useRef, useState } from "react";
 import Image from "next/image";
 import { TagLink } from "./tag-link";
 import { CategoryLink } from "./category-link";
@@ -14,17 +14,48 @@ type Props = PropsWithChildren & {
 };
 
 export function MainNavigation({ allTags, allCategories }: Props) {
+  const minSwipeDistance = 50;
   const socialHoverClassNames = `text-blue-400 hover:text-blue-200 transition-all`;
 
   const [isExpanded, setIsExpanded] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   const onHamburgerClick = () => {
-      setIsExpanded(!isExpanded);
+    setIsExpanded(!isExpanded);
+  }
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchEndX.current = null;
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchEnd = () => {
+    if (
+      touchStartX.current === null ||
+      touchEndX.current === null
+    ) {
+      return;
+    }
+
+    const distance = touchStartX.current - touchEndX.current;
+
+    if (distance > minSwipeDistance) {
+      onSwipeLeft();
+    }
+  };
+
+  const onSwipeLeft = () => {
+    setIsExpanded(false);
   }
 
   return (
     <>
-      <div className="lg:hidden fixed right-2 md:right-5 bottom-16 sm:bottom-16 md:bottom-auto top-auto md:top-2 print:hidden">
+      <div className="lg:hidden fixed right-2 md:right-5 bottom-36 sm:bottom-36 md:bottom-auto top-auto md:top-2 print:hidden">
         <button
           className="navbar-burger border-2 border-solid border-gray-400 hover:border-gray-100 hover:text-white rounded-xl flex items-center text-gray-200 p-3"
           onClick={onHamburgerClick}
@@ -41,6 +72,9 @@ export function MainNavigation({ allTags, allCategories }: Props) {
       </div>
       <div className="w-0 sm:w-0 xs:w-0 lg:w-3/12 xl:w-2/12"></div>
       <header
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
         className={classNames(
           "bg-gray-900 p-5 min-h-full lg:w-3/12 xl:w-2/12 w-10/12 sm:w-10/12 md:w-10/12 justify-center flex transition-all items-center flex-col text-center shadow-2xl fixed sm:fixed md:fixed",
           {
