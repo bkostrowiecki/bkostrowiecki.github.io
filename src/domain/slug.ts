@@ -9,7 +9,5 @@ export function slugifyForStaticParams(str: string) {
 export function unslugify<T>(str: string) {
   const transformed = decodeURIComponent(str.replaceAll('--sharp', '#').replaceAll("-", " "));
 
-  console.log(transformed);
-
   return (transformed[0].toLocaleUpperCase() + transformed.substring(1)) as T;
 }
